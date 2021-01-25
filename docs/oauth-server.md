@@ -96,7 +96,7 @@ To call a Google API using the `Credentials` object, complete the following step
     ```python
     import googleapiclient.discovery
 
-    sqladmin = googleapiclient.discovery.build('sqladmin', 'v1beta3', credentials=credentials)
+    sqladmin = googleapiclient.discovery.build('sqladmin', 'v1beta4', credentials=credentials)
     ```
 
 1. Make requests to the API service using the interface provided by the service object. For example, to list the instances of Cloud SQL databases in the example-123 project:
@@ -118,7 +118,7 @@ SERVICE_ACCOUNT_FILE = '/path/to/service.json'
 
 credentials = service_account.Credentials.from_service_account_file(
         SERVICE_ACCOUNT_FILE, scopes=SCOPES)
-sqladmin = googleapiclient.discovery.build('sqladmin', 'v1beta3', credentials=credentials)
+sqladmin = googleapiclient.discovery.build('sqladmin', 'v1beta4', credentials=credentials)
 response = sqladmin.instances().list(project='exemplary-example-123').execute()
 
 print(response)
